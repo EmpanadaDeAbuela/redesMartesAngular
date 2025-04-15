@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import axios from 'axios';
-import { Mascota } from '../mascota';
+import { Vehiculo } from '../vehiculo';
 import { ServicioService } from '../servicio.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class HomeComponent {
   }
   adicion:number = 1
   numero:number = 0
-  mascotasArray:Array<Mascota> = []
+  vehiculosArray:Array<Vehiculo> = []
 
   sumar(){
     this.numero+= this.adicion;
@@ -28,8 +28,8 @@ export class HomeComponent {
 
   getear(){
     this.servicio.getData().then(data => {
-      this.mascotasArray = data;
-      console.log(this.mascotasArray);
+      this.vehiculosArray = data;
+      console.log(this.vehiculosArray);
     }).catch(error => {
       console.error('Error fetching data:', error);
     });

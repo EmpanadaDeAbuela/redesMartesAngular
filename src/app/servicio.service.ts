@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
-import { Vehiculo } from './mascota';
+import { Vehiculo } from './vehiculo';
 import cors from 'cors';
 //const cors = require('cors');
 
@@ -24,7 +24,5 @@ export class ServicioService {
       })
     });
 }
-
-
   
 }
