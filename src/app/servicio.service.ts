@@ -17,7 +17,7 @@ export class ServicioService {
     return (await axios.get(this.url)).data;
   }
 
-  getData1(): Promise<Array<Vehiculo>> {
+  getData1(): Promise<Array<Vehiculo>> { //busca de la api
     return new Promise<Array<Vehiculo>>((resolve,reject)=>{
       axios.get(this.url).then(v=>{
         resolve(v.data);
