@@ -1,11 +1,11 @@
-export class Mascota{
-    id: number;
-    nombre:string;
-    tipo:string;
+export class Vehiculo{
+    marca: string;
+    modelo:string;
+    anio:number;
 
-    public constructor(id:number, nombre:string, tipo:string){
-        this.id = id
-        this.nombre = nombre
-        this.tipo = tipo
+    public constructor(marca:string, modelo:string, anio:number){
+        this.marca=marca;
+        this.modelo=modelo;
+        this.anio=anio;
     }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
-import { Mascota } from './mascota';
+import { Vehiculo } from './mascota';
 import cors from 'cors';
 //const cors = require('cors');
 
@@ -10,10 +10,21 @@ import cors from 'cors';
 
 export class ServicioService {
 
-  private url = 'http://localhost:3000/mascotas'
+  private url = 'http://localhost:3000/vehiculos'
   constructor() { }
 
-  async getData(): Promise<Array<Mascota>> {
+  async getData(): Promise<Array<Vehiculo>> {
     return (await axios.get(this.url)).data;
   }
+
+  getData1(): Promise<Array<Vehiculo>> {
+    return new Promise<Array<Vehiculo>>((resolve,reject)=>{
+      axios.get(this.url).then(v=>{
+        resolve(v.data);
+      })
+    });
+}
+
+
+  
 }
